@@ -1,0 +1,61 @@
+:root{--bg:#1e1e1e;--bg2:#2a2a2a;--bg3:#353535;--g:#7ed957;--t:#f3f3f3;--mut:#bfbfbf}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans",system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Barlow Condensed","IBM Plex Sans",sans-serif;text-transform:uppercase;font-weight:700;line-height:1;letter-spacing:.01em}
+header{position:sticky;top:0;z-index:10;background:rgba(30,30,30,.95);backdrop-filter:blur(8px);border-bottom:1px solid #3a3a3a}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:26px;letter-spacing:.06em;text-decoration:none}
+.logo b{color:var(--g)}
+nav{display:flex;gap:24px;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--g)}
+.btn{display:inline-block;background:var(--g);color:#111;text-decoration:none;padding:13px 26px;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--g)}
+.btn:hover{background:transparent;color:var(--g)}
+.btn.o{background:transparent;color:var(--t);border-color:#666}.btn.o:hover{border-color:var(--g);color:var(--g)}
+.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(30,30,30,.2),rgba(30,30,30,.92)),url(images/gym.jpg) center/cover}
+.hero .wrap{padding-bottom:64px;padding-top:120px}
+.hero h1{font-size:clamp(52px,9vw,112px);max-width:9em;margin-bottom:18px}
+.hero h1 em{color:var(--g);font-style:normal}
+.hero p{max-width:34em;font-size:19px;color:#e6e6e6;margin-bottom:26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.alert{background:var(--g);color:#111;font-size:15px;padding:10px 0}
+.alert b{text-transform:uppercase;letter-spacing:.05em}
+section{padding:84px 0}
+.k{color:var(--g);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(36px,5vw,58px);margin-bottom:20px}
+h3{font-size:28px;margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.card{background:var(--bg2);padding:26px;border-top:3px solid var(--g)}
+.card p{color:var(--mut);font-size:16px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.alt{background:var(--bg2)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.plan{background:var(--bg2);padding:28px;display:flex;flex-direction:column;border:1px solid #3a3a3a}
+.alt .plan{background:var(--bg)}
+.plan .n{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:24px;letter-spacing:.04em}
+.plan .pr{font-family:"Barlow Condensed",sans-serif;font-size:56px;font-weight:700;color:var(--g);line-height:1.1}
+.plan .pr small{font-size:16px;color:var(--mut);font-family:"IBM Plex Sans",sans-serif;font-weight:400}
+.plan ul{list-style:none;color:var(--mut);font-size:15.5px;margin-top:10px}
+.plan li{padding:5px 0;border-top:1px solid #3a3a3a}
+.fine{color:var(--mut);font-size:15px;margin-top:22px}
+.hours{width:100%;border-collapse:collapse;margin-top:8px}
+.hours td{padding:9px 0;border-bottom:1px solid #3a3a3a}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{color:var(--g)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.big{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;text-decoration:none;display:block;margin:4px 0 10px}
+footer{background:#111;color:#8b8b8b;font-size:13px;text-align:center;padding:18px}
+footer a{color:#bbb}
+.callbar{display:none}
+@media(max-width:860px){
+ nav{display:none}.cards{grid-template-columns:1fr 1fr}.plans{grid-template-columns:1fr}.split,.cgrid{grid-template-columns:1fr;gap:28px}
+ section{padding:56px 0}.hero{min-height:520px}
+ .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20}
+ .callbar a{flex:1;text-align:center;padding:14px;text-decoration:none;background:#111;color:#fff;font-size:15px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+ .callbar a+a{background:var(--g);color:#111}
+ body{padding-bottom:50px}
+}
+@media(max-width:480px){.cards{grid-template-columns:1fr}}
